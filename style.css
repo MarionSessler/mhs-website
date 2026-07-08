@@ -53,7 +53,8 @@ header{
   display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
 }
 .logo{
-  font-weight:600; font-size:22px; letter-spacing:1px; text-decoration:none;
+  font-weight:600; font-size:17px; letter-spacing:0.2px; text-decoration:none;
+  color:var(--tannengruen);
 }
 .logo .m{color:var(--tannengruen);}
 .logo .h{color:var(--indigo);}
