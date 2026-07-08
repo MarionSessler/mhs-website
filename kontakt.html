@@ -45,18 +45,14 @@
   <div class="wrap grid-2">
     <div>
       <h2>Schreiben Sie mir</h2>
-      <form action="https://formsubmit.co/marionsessler@institut-media.de" method="POST">
-        <input type="hidden" name="_subject" value="Neue Nachricht über die Website">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://marionsessler.github.io/mhs-website/danke.html">
+      <form onsubmit="return false;">
         <div>
           <label for="name">Name</label>
-          <input type="text" id="name" name="Name" required>
+          <input type="text" id="name" name="Name">
         </div>
         <div>
           <label for="email">E-Mail</label>
-          <input type="email" id="email" name="E-Mail" required>
+          <input type="email" id="email" name="E-Mail">
         </div>
         <div>
           <label for="thema">Worum geht es?</label>
@@ -64,10 +60,18 @@
         </div>
         <div>
           <label for="nachricht">Nachricht</label>
-          <textarea id="nachricht" name="Nachricht" required></textarea>
+          <textarea id="nachricht" name="Nachricht"></textarea>
         </div>
-        <button type="submit" class="btn btn-indigo" style="align-self:flex-start;">Nachricht senden</button>
+        <button type="button" class="btn btn-indigo" style="align-self:flex-start;" onclick="
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var thema = document.getElementById('thema').value || 'Allgemeine Anfrage';
+          var nachricht = document.getElementById('nachricht').value;
+          var body = 'Name: ' + name + '\n' + 'E-Mail: ' + email + '\n\n' + nachricht;
+          window.location.href = 'mailto:marionsessler@institut-media.de?subject=' + encodeURIComponent('Website-Anfrage: ' + thema) + '&body=' + encodeURIComponent(body);
+        ">In E-Mail-Programm öffnen</button>
       </form>
+      <p style="margin-top:0.75rem; font-size:13px; color:var(--text-muted);">Der Button öffnet Ihr eigenes E-Mail-Programm mit vorausgefüllter Nachricht – es werden keine Daten an Dritte übertragen.</p>
     </div>
     <div>
       <h2>Direkt erreichbar</h2>
