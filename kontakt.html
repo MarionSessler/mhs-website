@@ -45,22 +45,25 @@
   <div class="wrap grid-2">
     <div>
       <h2>Schreiben Sie mir</h2>
-      <form>
+      <form action="https://formsubmit.co/marionsessler@institut-media.de" method="POST">
+        <input type="hidden" name="_subject" value="Neue Nachricht über die Website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://marionsessler.github.io/mhs-website/danke.html">
         <div>
           <label for="name">Name</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="Name" required>
         </div>
         <div>
           <label for="email">E-Mail</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="E-Mail" required>
         </div>
         <div>
           <label for="thema">Worum geht es?</label>
-          <input type="text" id="thema" name="thema" placeholder="Beratung, Coaching oder allgemeine Frage">
+          <input type="text" id="thema" name="Thema" placeholder="Beratung, Coaching oder allgemeine Frage">
         </div>
         <div>
           <label for="nachricht">Nachricht</label>
-          <textarea id="nachricht" name="nachricht"></textarea>
+          <textarea id="nachricht" name="Nachricht" required></textarea>
         </div>
         <button type="submit" class="btn btn-indigo" style="align-self:flex-start;">Nachricht senden</button>
       </form>
@@ -68,9 +71,11 @@
     <div>
       <h2>Direkt erreichbar</h2>
       <p>
-        Marion Sessler<br>
-        E-Mail: <a href="mailto:info@mhs-beispiel.de" style="color:var(--indigo);">info@mhs-beispiel.de</a><br>
-        Telefon: 0000 / 000000
+        Marion Seßler<br>
+        Intem Institut und Media<br>
+        Wilhelm-Peters-Str. 124<br>
+        68219 Mannheim<br>
+        E-Mail: <a href="mailto:marionsessler@institut-media.de" style="color:var(--indigo);">marionsessler@institut-media.de</a>
       </p>
       <div class="card accent-gelb" style="margin-top:1.5rem;">
         <h3>Gut zu wissen</h3>
