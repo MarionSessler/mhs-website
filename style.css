@@ -178,10 +178,10 @@ textarea{min-height:120px; resize:vertical;}
   nav ul li{padding:0.6rem 0; border-bottom:1px solid var(--hellgrau);}
   nav ul li:last-child{border-bottom:none;}
 
-  /* Welle auf Mobile ausblenden (verzerrt sonst) */
-  .hero-wave{display:none;}
+  /* Welle nur auf Mobile korrigieren (Desktop bleibt beim Original-Verhalten) */
+  .hero-wave{object-fit:cover;}
 
-  /* Logo/Subheadline immer oben rechts, Text darunter volle Breite */
+  /* Logo/Subheadline bleibt in natürlicher Reihenfolge: Text oben, Logo darunter, rechtsbündig */
   .hero-content{flex-direction:column;}
-  .hero-content > div:last-child{order:-1; align-self:flex-end; margin-bottom:1rem;}
+  .hero-content > div:last-child{align-self:flex-end; margin-top:1rem;}
 }
