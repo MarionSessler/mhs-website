@@ -46,6 +46,17 @@
     margin-bottom: 0.15rem;
   }
 
+  .tool-entry--alt {
+    background: #fdf7e8;
+    border-top: none;
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    margin: 1rem 0;
+  }
+
+  .btn-gelb { background: var(--gelb); color: #3a2e00; }
+  .btn-gelb:hover { background: var(--gelb-dark); color: #fff; }
+
   @media (max-width: 720px) {
     .tool-entry { grid-template-columns: 1fr; }
   }
@@ -107,8 +118,8 @@
     max-width: 640px;
     margin: 3rem auto 0;
     padding: 2rem 1.5rem;
-    background: #FAF9F6;
-    border-radius: 4px;
+    background: #fdf7e8;
+    border-radius: var(--radius);
   }
   .tools-situations h2 { margin-top: 0; font-size: 1.2rem; }
   .tools-situations ul {
@@ -173,7 +184,7 @@
     </div>
   </div>
 
-  <div class="tool-entry">
+  <div class="tool-entry tool-entry--alt">
     <div class="tool-content">
       <div class="tool-heading-row">
         <div class="tool-badge tool-badge--indigo">A</div>
@@ -203,7 +214,7 @@
     </div>
   </div>
 
-  <div class="tool-entry">
+  <div class="tool-entry tool-entry--alt">
     <div class="tool-content">
       <div class="tool-heading-row">
         <div class="tool-badge tool-badge--green">R</div>
@@ -248,6 +259,14 @@
     <a class="tool-cta" href="kontakt.html">Unverbindlich anfragen →</a>
   </div>
 
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center;">
+    <h2>Welches Tool passt zu meiner Situation?</h2>
+    <p class="lead" style="margin:0 auto 1.5rem auto;">Nimm mit mir Kontakt auf, schildere deine Situation und wir besprechen, was für deine Situation optimal ist.</p>
+    <a href="kontakt.html" class="btn btn-gelb">Kontakt aufnehmen</a>
+  </div>
 </section>
 
 <footer>
