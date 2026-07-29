@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Tools im Überblick – MHS | Marion Seßler</title>
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="mhs-icon-180.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Seiteneigene Ergänzung für tools.html ===== */
+  /* Falls diese Regeln stattdessen in style.css landen sollen: einfach diesen
+     <style>-Block hier entfernen und den Inhalt ans Ende von style.css anhängen. */
+
+  .tools-intro {
+    max-width: 640px;
+    margin: 0 auto 3rem;
+    padding: 0 1.25rem;
+    text-align: center;
+  }
+  .tools-intro p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .tools-list {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .tool-entry {
+    display: flex;
+    gap: 1.25rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid #DEDCD4;
+  }
+  .tool-entry:first-child { border-top: none; padding-top: 0; }
+
+  .tool-badge {
+    flex: 0 0 auto;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  .tool-badge--green  { background: #2D6950; }
+  .tool-badge--indigo { background: #462F97; }
+  .tool-badge--yellow { background: #F7C844; color: #3a2e00; }
+
+  .tool-content h2 {
+    margin: 0 0 0.15rem;
+    font-size: 1.3rem;
+  }
+  .tool-question {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.9rem;
+  }
+  .tool-content p {
+    line-height: 1.75;
+    margin: 0 0 0.9rem;
+  }
+
+  .tool-note {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #444;
+    border-left: 2px solid #DEDCD4;
+    padding-left: 0.9rem;
+    margin: 0 0 1rem;
+  }
+
+  .tool-cta {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2D6950;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .tool-cta:hover { border-bottom-color: #2D6950; }
+
+  .tools-situations {
+    max-width: 640px;
+    margin: 3rem auto 0;
+    padding: 2rem 1.5rem;
+    background: #FAF9F6;
+    border-radius: 4px;
+  }
+  .tools-situations h2 { margin-top: 0; font-size: 1.2rem; }
+  .tools-situations ul {
+    padding-left: 1.1rem;
+    line-height: 1.9;
+  }
+  .tools-situations p { line-height: 1.7; }
+  .tools-situations .tool-cta { color: #462F97; }
+  .tools-situations .tool-cta:hover { border-bottom-color: #462F97; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Marion Seßler &ndash; Institut und Media</a>
+    <button class="nav-toggle" aria-label="Menü öffnen" onclick="document.querySelector('nav ul').classList.toggle('open')"><span></span></button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="beratung.html">Beratung</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="marion-sessler.html">Marion Seßler</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="hero-wave" viewBox="0 0 1080 260" preserveAspectRatio="none">
+    <path d="M -20 220 C 60 160, 140 260, 220 200 C 300 140, 380 240, 460 180 C 540 120, 620 220, 700 160 C 780 100, 860 200, 940 140 C 1000 100, 1040 130, 1100 90"
+      fill="none" stroke="#DEDCD4" stroke-width="4"/>
+  </svg>
+  <div class="wrap hero-content" style="display:flex; justify-content:space-between; align-items:flex-start; gap:2rem; flex-wrap:wrap;">
+    <div style="flex:1; min-width:280px;">
+      <h1>Fünf Wege, dir selbst auf die Spur zu kommen.</h1>
+      <p class="lead">Jedes dieser Tools schaut aus einem anderen Blickwinkel auf dich. Du musst nicht alle kennen – vielleicht macht dich einfach eines neugierig.</p>
+    </div>
+    <div style="flex-shrink:0; text-align:right;">
+      <img src="mhs-logo-freigestellt.png" alt="MHS Logo" style="height:80px;">
+      <div class="subheadline" style="margin-top:0.5rem; font-size:17px;">Mind. Heart. Soul.</div>
+    </div>
+  </div>
+</section>
+
+<section class="tools-list">
+
+  <div class="tool-entry">
+    <div class="tool-badge tool-badge--green">I</div>
+    <div class="tool-content">
+      <h2>INSIGHTS MDI®<span class="tool-question">Wie wirkst du wirklich auf andere?</span></h2>
+      <p>Stimmt das Bild, das andere von dir haben, eigentlich mit deinem Selbstbild überein? INSIGHTS MDI® macht sichtbar, wie du dich in Arbeits- und Stresssituationen typischerweise verhältst, wie du im Team agierst und welche Rolle du dir selbst zuschreibst. Die Analyse verbindet dein beobachtbares Verhalten mit deinen tieferliegenden Werten und Antriebsfedern – und erklärt so, warum du auf bestimmte Situationen ganz charakteristisch reagierst.</p>
+      <p class="tool-note">Es gibt hier kein Richtig oder Falsch – jedes Verhaltensmuster hat seine Stärken. Es geht darum, deine bewusst zu erkennen und gezielt einzusetzen.</p>
+      <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20INSIGHTS%20MDI%C2%AE">INSIGHTS MDI® anfragen →</a>
+    </div>
+  </div>
+
+  <div class="tool-entry">
+    <div class="tool-badge tool-badge--indigo">A</div>
+    <div class="tool-content">
+      <h2>ASSESS<span class="tool-question">Was kannst du wirklich gut?</span></h2>
+      <p>ASSESS gleicht deine Persönlichkeitseigenschaften und Kompetenzen mit den Anforderungen ab, die für deine berufliche Situation oder dein Ziel relevant sind. Statt eines vagen Bauchgefühls bekommst du ein konkretes, nachvollziehbares Feedback zu deinen Stärken – und zu den Bereichen, die sich gezielt weiterentwickeln lassen.</p>
+      <p class="tool-note">Besonders hilfreich, wenn eine berufliche Entscheidung ansteht und du eine ehrliche, fundierte Grundlage dafür suchst.</p>
+      <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20ASSESS">ASSESS anfragen →</a>
+    </div>
+  </div>
+
+  <div class="tool-entry">
+    <div class="tool-badge tool-badge--yellow">M</div>
+    <div class="tool-content">
+      <h2>MPA<span class="tool-question">Was treibt dich wirklich an?</span></h2>
+      <p>Warum fühlen sich manche Aufgaben leicht an – und andere wie Schwerarbeit, obwohl sie objektiv gar nicht so unterschiedlich sind? Die MotivationsPotenzialAnalyse (MPA) misst nicht, welche Werte du hast, sondern wie viel emotionale Kraft tatsächlich hinter deinen Motiven steckt. Sie fragt nicht nach Verhaltensweisen, sondern danach, wie anregend sich bestimmte Situationen für dich tatsächlich anfühlen.</p>
+      <p class="tool-note">Die Auswertung bewertet nichts als gut oder schlecht – sie zeigt dir schlicht, wo deine Energie wirklich herkommt.</p>
+      <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20MPA">MPA anfragen →</a>
+    </div>
+  </div>
+
+  <div class="tool-entry">
+    <div class="tool-badge tool-badge--green">R</div>
+    <div class="tool-content">
+      <h2>RELIEF Stressprävention by SCHEELEN®<span class="tool-question">Was kostet dich gerade Kraft?</span></h2>
+      <p>Was genau belastet dich – und was hilft dir tatsächlich dagegen? RELIEF zeichnet ein umfassendes Bild deiner individuellen Stress-Situation im Berufsleben: welche Stressquellen bei dir wirken, wie du sie bewertest, wie viel Sinn du in deiner Arbeit erlebst und welche Ressourcen dir bereits zur Verfügung stehen.</p>
+      <p class="tool-note">Kein allgemeiner Stresstipp, sondern eine Analyse, die auf deine tatsächliche Situation zugeschnitten ist.</p>
+      <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20RELIEF%20Stresspr%C3%A4vention">RELIEF anfragen →</a>
+    </div>
+  </div>
+
+  <div class="tool-entry">
+    <div class="tool-badge tool-badge--indigo">H</div>
+    <div class="tool-content">
+      <h2>History Clearing<span class="tool-question">Was hält dich unbewusst zurück?</span></h2>
+      <p>Was hält dich zurück, obwohl du eigentlich weiterkommen willst? History Clearing nach Karin Maria Hafen hilft dir, alte Muster und unbewusste Prägungen aufzuspüren, die dich blockieren – und sie behutsam aufzulösen. Es geht dabei nicht um Analyse von außen, sondern um das Sichtbarmachen dessen, was in dir selbst schon lange wirkt, ohne dass es dir bewusst war.</p>
+      <p class="tool-note">Das Ergebnis ist keine neue Erklärung für dein Verhalten, sondern mehr innere Freiheit.</p>
+      <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20History%20Clearing">History Clearing anfragen →</a>
+    </div>
+  </div>
+
+  <div class="tools-situations">
+    <h2>Unsicher, welches Tool zu deiner Situation passt?</h2>
+    <ul>
+      <li>Vision, aber unklar ob deine Kompetenzen reichen → ASSESS</li>
+      <li>"Da geht noch mehr", kannst es nicht benennen → INSIGHTS MDI®</li>
+      <li>Motivation lässt nach, obwohl äußerlich alles passt → MPA</li>
+      <li>Wiederkehrende Muster, die dich zurückhalten → History Clearing</li>
+      <li>Gedanken kreisen, dir fehlt Ruhe → RELIEF</li>
+    </ul>
+    <p>Nicht sicher? Das müssen wir auch nicht vorab klären – im kostenlosen Erstgespräch finden wir das gemeinsam heraus.</p>
+    <a class="tool-cta" href="kontakt.html">Unverbindlich anfragen →</a>
+  </div>
+
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <img src="mhs-logo-freigestellt.png" alt="MHS Logo" style="height:28px;">
+    <span>© 2026 Marion Seßler · Beratung &amp; Coaching · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
