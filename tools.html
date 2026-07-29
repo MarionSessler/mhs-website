@@ -24,18 +24,31 @@
   }
 
   .tools-list {
-    max-width: 640px;
+    max-width: var(--maxw);
     margin: 0 auto;
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
   }
 
   .tool-entry {
-    display: flex;
-    gap: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
     padding: 2.5rem 0;
     border-top: 1px solid #DEDCD4;
   }
   .tool-entry:first-child { border-top: none; padding-top: 0; }
+
+  .tool-heading-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.15rem;
+  }
+
+  @media (max-width: 720px) {
+    .tool-entry { grid-template-columns: 1fr; }
+  }
 
   .tool-badge {
     flex: 0 0 auto;
@@ -54,7 +67,7 @@
   .tool-badge--yellow { background: #F7C844; color: #3a2e00; }
 
   .tool-content h2 {
-    margin: 0 0 0.15rem;
+    margin: 0;
     font-size: 1.3rem;
   }
   .tool-question {
@@ -145,9 +158,15 @@
 <section class="tools-list">
 
   <div class="tool-entry">
-    <div class="tool-badge tool-badge--green">I</div>
+    <div style="border-radius:var(--radius); overflow:hidden; min-height:280px;">
+      <img src="INSIGHTS_MDI__Startpaket.jpg" alt="INSIGHTS MDI® Startpaket mit Rad, Karten und Kappen" style="width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
     <div class="tool-content">
-      <h2>INSIGHTS MDI®<span class="tool-question">Wie wirkst du wirklich auf andere?</span></h2>
+      <div class="tool-heading-row">
+        <div class="tool-badge tool-badge--green">I</div>
+        <h2>INSIGHTS MDI®</h2>
+      </div>
+      <span class="tool-question">Wie wirkst du wirklich auf andere?</span>
       <p>Stimmt das Bild, das andere von dir haben, eigentlich mit deinem Selbstbild überein? INSIGHTS MDI® macht sichtbar, wie du dich in Arbeits- und Stresssituationen typischerweise verhältst, wie du im Team agierst und welche Rolle du dir selbst zuschreibst. Die Analyse verbindet dein beobachtbares Verhalten mit deinen tieferliegenden Werten und Antriebsfedern – und erklärt so, warum du auf bestimmte Situationen ganz charakteristisch reagierst.</p>
       <p class="tool-note">Es gibt hier kein Richtig oder Falsch – jedes Verhaltensmuster hat seine Stärken. Es geht darum, deine bewusst zu erkennen und gezielt einzusetzen.</p>
       <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20INSIGHTS%20MDI%C2%AE">Weitere Infos →</a>
@@ -155,19 +174,29 @@
   </div>
 
   <div class="tool-entry">
-    <div class="tool-badge tool-badge--indigo">A</div>
     <div class="tool-content">
-      <h2>ASSESS<span class="tool-question">Was kannst du wirklich gut?</span></h2>
+      <div class="tool-heading-row">
+        <div class="tool-badge tool-badge--indigo">A</div>
+        <h2>ASSESS</h2>
+      </div>
+      <span class="tool-question">Was kannst du wirklich gut?</span>
       <p>ASSESS gleicht deine Persönlichkeitseigenschaften und Kompetenzen mit den Anforderungen ab, die für deine berufliche Situation oder dein Ziel relevant sind. Statt eines vagen Bauchgefühls bekommst du ein konkretes, nachvollziehbares Feedback zu deinen Stärken – und zu den Bereichen, die sich gezielt weiterentwickeln lassen.</p>
       <p class="tool-note">Besonders hilfreich, wenn eine berufliche Entscheidung ansteht und du eine ehrliche, fundierte Grundlage dafür suchst.</p>
       <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20ASSESS">Weitere Infos →</a>
     </div>
+    <div style="border-radius:var(--radius); overflow:hidden; min-height:280px;">
+      <img src="ASSESS_Account_Teilnehmer_PersonalityProfile2.png" alt="ASSESS Persönlichkeitsprofil, Beispielauswertung" style="width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
   </div>
 
   <div class="tool-entry">
-    <div class="tool-badge tool-badge--yellow">M</div>
+    <div class="img-placeholder" style="min-height:280px;">Foto-Platzhalter<br>MPA</div>
     <div class="tool-content">
-      <h2>MPA<span class="tool-question">Was treibt dich wirklich an?</span></h2>
+      <div class="tool-heading-row">
+        <div class="tool-badge tool-badge--yellow">M</div>
+        <h2>MPA</h2>
+      </div>
+      <span class="tool-question">Was treibt dich wirklich an?</span>
       <p>Warum fühlen sich manche Aufgaben leicht an – und andere wie Schwerarbeit, obwohl sie objektiv gar nicht so unterschiedlich sind? Die MotivationsPotenzialAnalyse (MPA) misst nicht, welche Werte du hast, sondern wie viel emotionale Kraft tatsächlich hinter deinen Motiven steckt. Sie fragt nicht nach Verhaltensweisen, sondern danach, wie anregend sich bestimmte Situationen für dich tatsächlich anfühlen.</p>
       <p class="tool-note">Die Auswertung bewertet nichts als gut oder schlecht – sie zeigt dir schlicht, wo deine Energie wirklich herkommt.</p>
       <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20MPA">Weitere Infos →</a>
@@ -175,19 +204,31 @@
   </div>
 
   <div class="tool-entry">
-    <div class="tool-badge tool-badge--green">R</div>
     <div class="tool-content">
-      <h2>RELIEF Stressprävention by SCHEELEN®<span class="tool-question">Was kostet dich gerade Kraft?</span></h2>
+      <div class="tool-heading-row">
+        <div class="tool-badge tool-badge--green">R</div>
+        <h2>RELIEF Stressprävention by SCHEELEN®</h2>
+      </div>
+      <span class="tool-question">Was kostet dich gerade Kraft?</span>
       <p>Was genau belastet dich – und was hilft dir tatsächlich dagegen? RELIEF zeichnet ein umfassendes Bild deiner individuellen Stress-Situation im Berufsleben: welche Stressquellen bei dir wirken, wie du sie bewertest, wie viel Sinn du in deiner Arbeit erlebst und welche Ressourcen dir bereits zur Verfügung stehen.</p>
       <p class="tool-note">Kein allgemeiner Stresstipp, sondern eine Analyse, die auf deine tatsächliche Situation zugeschnitten ist.</p>
       <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20RELIEF%20Stresspr%C3%A4vention">Weitere Infos →</a>
     </div>
+    <div style="border-radius:var(--radius); overflow:hidden; min-height:280px;">
+      <img src="Grafik_Relief-1.jpg" alt="RELIEF Stresspräventionsprofil, Beispielauswertung" style="width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
   </div>
 
   <div class="tool-entry">
-    <div class="tool-badge tool-badge--indigo">H</div>
+    <div style="border-radius:var(--radius); overflow:hidden; min-height:280px;">
+      <img src="HC-Generationen.jpeg" alt="History Clearing Generationenrad" style="width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
     <div class="tool-content">
-      <h2>History Clearing<span class="tool-question">Was hält dich unbewusst zurück?</span></h2>
+      <div class="tool-heading-row">
+        <div class="tool-badge tool-badge--indigo">H</div>
+        <h2>History Clearing</h2>
+      </div>
+      <span class="tool-question">Was hält dich unbewusst zurück?</span>
       <p>Was hält dich zurück, obwohl du eigentlich weiterkommen willst? History Clearing nach Karin Maria Hafen hilft dir, alte Muster und unbewusste Prägungen aufzuspüren, die dich blockieren – und sie behutsam aufzulösen. Es geht dabei nicht um Analyse von außen, sondern um das Sichtbarmachen dessen, was in dir selbst schon lange wirkt, ohne dass es dir bewusst war.</p>
       <p class="tool-note">Das Ergebnis ist keine neue Erklärung für dein Verhalten, sondern mehr innere Freiheit.</p>
       <a class="tool-cta" href="mailto:marionsessler@institut-media.de?subject=Anfrage%20History%20Clearing">Weitere Infos →</a>
