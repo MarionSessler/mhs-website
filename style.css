@@ -57,7 +57,7 @@ header{
 }
 .logo .m{color:var(--tannengruen);}
 .logo .h{color:var(--indigo);}
-.logo .s{color:var(--gelb-dark);}
+.logo .s{color:var(--gelb);}
 nav ul{list-style:none; display:flex; gap:1.75rem; margin:0; padding:0; flex-wrap:wrap;}
 .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px; width:32px; height:26px; position:relative;}
 .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
@@ -129,6 +129,30 @@ section ul li::before{
 .card.accent-indigo{border-left:3px solid var(--indigo);}
 .card.accent-gruen{border-left:3px solid var(--tannengruen);}
 .card.accent-gelb{border-left:3px solid var(--gelb);}
+
+/* Kooperationspartner-Logokacheln: einheitliche Höhe unabhängig vom
+   Seitenverhältnis der einzelnen Partner-Logos (Hoch- oder Querformat) */
+.coop-logo{
+  height:56px; display:flex; align-items:center; justify-content:flex-start;
+  margin-bottom:1rem;
+}
+.coop-logo img{max-height:100%; max-width:100%; object-fit:contain;}
+
+/* Variante für eher quadratische/hochformatige Logos (z.B. Badges/Siegel):
+   feste Box oben links in der Karte, statt in eine schmale Höhen-Leiste
+   gequetscht zu werden – erhält die Bildproportion, sitzt bündig links. */
+.coop-logo-square{
+  margin-bottom:-3px; display:flex; justify-content:flex-end;
+}
+.coop-logo-square img{width:120px; height:auto; display:block;}
+
+.coop-card h3{font-size:19px; margin-bottom:0.5rem;}
+.coop-card p{font-size:16px; color:var(--text-muted); margin:0;}
+.coop-card a.coop-link{
+  font-size:15px; font-weight:500; text-decoration:none; color:var(--tannengruen);
+  display:inline-block; margin-top:0.75rem;
+}
+.coop-card a.coop-link:hover{text-decoration:underline;}
 
 /* Split tiles on homepage */
 .split{display:grid; grid-template-columns:1fr 1fr; gap:0; border-radius:var(--radius); overflow:hidden; border:1px solid var(--hellgrau);}
